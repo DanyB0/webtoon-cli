@@ -4,5 +4,4 @@
    "webtoon_page_link":"https://asura.gg/manga/",
    "single_webtoon_page_link":"https://asura.gg/{MANHWA_NAME}-chapter-{CHAPTER_NUMBER}",
    "search_link":"https://asura.gg/?s={QUERY}",
-   "alternative_links":[]
 }
