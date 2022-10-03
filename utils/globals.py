@@ -1,11 +1,9 @@
 import json
-
 import os
 
-BASE_DIR = os.getcwd().remove("/utils")
 
 # get the informations from the websites.json file
-def get_website_info(BASE_DIR):
+def get_website_info(BASE_DIR_LOCAL):
 
     with open(f"{BASE_DIR_LOCAL}/src/websites.json", "r") as websites_list:
         data = json.load(websites_list)
