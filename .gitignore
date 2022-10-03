@@ -1,1 +1,3 @@
 venv/
+/utils/__pycache__/
+/utils/scrape/__pycache__/
