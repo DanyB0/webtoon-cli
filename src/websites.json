@@ -2,6 +2,6 @@
    "name": "AsuraScans",
    "domain": "https://asura.gg/",
    "webtoon_page_link":"https://asura.gg/manga/",
-   "single_webtoon_page_link":"https://asura.gg/{MANHWA_NAME}-chapter-{CHAPTER_NUMBER}",
-   "search_link":"https://asura.gg/?s={QUERY}",
+   "single_webtoon_page_link":"https://asura.gg/{webtoon_name}-chapter-{chapter_number}",
+   "search_link":"https://asura.gg/?s="
 }
