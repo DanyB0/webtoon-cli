@@ -60,5 +60,8 @@ elif args.search:
     query = args.search
     complete_search_link = f"{search_link}{query}"
     names_list = utils.scrape.search(complete_search_link)
+    print("\n")
     for i, name in enumerate(names_list):
-        print(f"{i+1}) {name}")
+        link = name.replace(" ", "-").lower()
+        print(f"{i+1}) {name} ({page_link}{link})")
+    print("\n")
