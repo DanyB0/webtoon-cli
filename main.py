@@ -1,6 +1,5 @@
 import argparse
 import os
-import sys
 
 import utils
 
@@ -52,16 +51,27 @@ if args.name:
     elif args.download:
         print("\nwork in progress...\n")
     # elif args.change-website:
-        # print("\nwork in progress...\n")
+    # print("\nwork in progress...\n")
     else:
         print(f"\n{page_link}{webtoon_name}\n")
 
 elif args.search:
     query = args.search
     complete_search_link = f"{search_link}{query}"
-    names_list = utils.scrape.search(complete_search_link)
+    # function search in 'utils/scrape/search.py'
+    soup, names = utils.scrape.get_search_webtoons(complete_search_link)
+    titles = utils.scrape.search(soup, names)
+
+    # print the results formatted in a decent way
     print("\n")
-    for i, name in enumerate(names_list):
-        link = name.replace(" ", "-").lower()
-        print(f"{i+1}) {name} ({page_link}{link})")
+    for i, name in enumerate(titles):
+        link = name.replace(" ", "-").replace("’", "").lower()
+        if i + 1 < 10:
+            print(
+                f"{i+1})  {name}\n    ({page_link}/{link})\n--------------------------------------------------------------------------"
+            )
+        else:
+            print(
+                f"{i+1}) {name}\n    ({page_link}/{link})\n--------------------------------------------------------------------------"
+            )
     print("\n")
