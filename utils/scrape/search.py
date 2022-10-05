@@ -18,7 +18,7 @@ def search(soup, names):
     titles = []
 
     try:
-        # get all the other results pages (if they  exist)
+        # get all the other results pages (if they exist)
         other_pages = soup.find_all("a", {"class": "page-numbers"}, href=True)
 
         # delete the element in the last position (is the 'next page button')

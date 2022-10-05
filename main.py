@@ -58,7 +58,7 @@ if args.name:
 elif args.search:
     query = args.search
     complete_search_link = f"{search_link}{query}"
-    # functions  in 'utils/scrape/search.py'
+    # functions in 'utils/scrape/search.py'
     soup, names = utils.scrape.get_search_webtoons(complete_search_link)
     titles = utils.scrape.search(soup, names)
 
