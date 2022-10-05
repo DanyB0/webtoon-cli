@@ -1,5 +1,6 @@
 import argparse
 import os
+import sys
 
 import utils
 
@@ -30,6 +31,11 @@ parser.add_argument(
 parser.add_argument(
     "--change-website", help="change the website", type=str, action="store"
 )
+
+# print help if no arguments are given
+if len(sys.argv) == 1:
+    parser.print_help(sys.stderr)
+    sys.exit(1)
 
 args = parser.parse_args()
 
