@@ -1,5 +1,6 @@
 import argparse
 import os
+import sys
 
 import utils
 
@@ -31,6 +32,11 @@ parser.add_argument(
     "--change-website", help="change the website", type=str, action="store"
 )
 
+# print help if no arguments are given
+if len(sys.argv) == 1:
+    parser.print_help(sys.stderr)
+    sys.exit(1)
+
 args = parser.parse_args()
 
 # get all the website info (globals.py file)
@@ -58,7 +64,7 @@ if args.name:
 elif args.search:
     query = args.search
     complete_search_link = f"{search_link}{query}"
-    # function search in 'utils/scrape/search.py'
+    # functions in 'utils/scrape/search.py'
     soup, names = utils.scrape.get_search_webtoons(complete_search_link)
     titles = utils.scrape.search(soup, names)
 
