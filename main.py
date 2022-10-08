@@ -28,10 +28,6 @@ parser.add_argument(
     "-n", "--name", help="name of the webtoon", type=str, action="store"
 )
 
-parser.add_argument(
-    "--change-website", help="change the website", type=str, action="store"
-)
-
 # print help if no arguments are given
 if len(sys.argv) == 1:
     parser.print_help(sys.stderr)
@@ -56,8 +52,6 @@ if args.name:
         # print(f"{page_link}{webtoon_name}")
     elif args.download:
         print("\nwork in progress...\n")
-    # elif args.change-website:
-    # print("\nwork in progress...\n")
     else:
         print(f"\n{page_link}{webtoon_name}\n")
 
