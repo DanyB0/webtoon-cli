@@ -2,7 +2,7 @@ import argparse
 import os
 import sys
 
-import utils
+import src
 
 BASE_DIR = os.getcwd()
 
@@ -46,7 +46,7 @@ args = parser.parse_args()
     page_link,
     webtoon_page_link,
     search_link,
-) = utils.get_website_info(BASE_DIR)
+) = src.get_website_info(BASE_DIR)
 
 
 if args.name:
@@ -65,8 +65,8 @@ elif args.search:
     query = args.search
     complete_search_link = f"{search_link}{query}"
     # functions in 'utils/scrape/search.py'
-    soup, names = utils.scrape.get_search_webtoons(complete_search_link)
-    titles = utils.scrape.search(soup, names)
+    soup, names = src.scrape.get_search_webtoons(complete_search_link)
+    titles = src.scrape.search(soup, names)
 
     # print the results formatted in a decent way
     print("\n")
