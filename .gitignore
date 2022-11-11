@@ -1,4 +1,4 @@
 venv/
-/src/__pycache__/
-/src/webtooncli/__pycache__/
-/src/webtooncli/scrape/__pycache__/
+/webtoon-cli/src/__pycache__/
+/webtoon-cli/src/webtooncli/__pycache__/
+/webtoon-cli/src/webtooncli/scrape/__pycache__/
