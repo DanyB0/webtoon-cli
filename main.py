@@ -4,7 +4,7 @@ import sys
 
 import src
 
-BASE_DIR = os.getcwd()
+BASE_DIR = os.path.dirname(__file__)
 
 parser = argparse.ArgumentParser(
     description="Webtoons utility tool",
